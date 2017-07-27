@@ -12,12 +12,6 @@ function createWindow() {
 	});
 	win.loadURL(baseURL,
 		{userAgent: userAgent});
-	win.on('closed', () => {
-		win = null;
-	});
 }
 
 app.on('ready', createWindow);
-app.on('window-all-closed', () => {
-	app.quit();
-});
